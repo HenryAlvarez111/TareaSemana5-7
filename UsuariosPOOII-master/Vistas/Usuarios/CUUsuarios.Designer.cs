@@ -29,25 +29,24 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.chbActivo = new System.Windows.Forms.CheckBox();
-            this.cmd_Roles = new System.Windows.Forms.ComboBox();
+            this.chkDisponibilidad = new System.Windows.Forms.CheckBox();
+            this.cmbRol = new System.Windows.Forms.ComboBox();
             this.txt_Repita = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.txt_Contrasenia = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_Nombre = new System.Windows.Forms.TextBox();
-            this.btn_Salir = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btn_Editar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.btn_Eliminar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.btnGuadar = new System.Windows.Forms.Button();
@@ -57,25 +56,24 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.chbActivo);
-            this.panel1.Controls.Add(this.cmd_Roles);
+            this.panel1.Controls.Add(this.chkDisponibilidad);
+            this.panel1.Controls.Add(this.cmbRol);
             this.panel1.Controls.Add(this.txt_Repita);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.txt_Contrasenia);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txt_Nombre);
-            this.panel1.Controls.Add(this.btn_Salir);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.btn_Editar);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.btnEdit);
+            this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btn_Eliminar);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.btn_Cancelar);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.btnGuadar);
@@ -86,26 +84,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(841, 509);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // chbActivo
+            // chkDisponibilidad
             // 
-            this.chbActivo.AutoSize = true;
-            this.chbActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbActivo.Location = new System.Drawing.Point(36, 374);
-            this.chbActivo.Name = "chbActivo";
-            this.chbActivo.Size = new System.Drawing.Size(106, 24);
-            this.chbActivo.TabIndex = 16;
-            this.chbActivo.Text = "checkBox1";
-            this.chbActivo.UseVisualStyleBackColor = true;
+            this.chkDisponibilidad.AutoSize = true;
+            this.chkDisponibilidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkDisponibilidad.Location = new System.Drawing.Point(36, 374);
+            this.chkDisponibilidad.Name = "chkDisponibilidad";
+            this.chkDisponibilidad.Size = new System.Drawing.Size(126, 24);
+            this.chkDisponibilidad.TabIndex = 16;
+            this.chkDisponibilidad.Text = "Disponibilidad";
+            this.chkDisponibilidad.UseVisualStyleBackColor = true;
             // 
-            // cmd_Roles
+            // cmbRol
             // 
-            this.cmd_Roles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmd_Roles.FormattingEnabled = true;
-            this.cmd_Roles.Location = new System.Drawing.Point(36, 328);
-            this.cmd_Roles.Name = "cmd_Roles";
-            this.cmd_Roles.Size = new System.Drawing.Size(392, 28);
-            this.cmd_Roles.TabIndex = 15;
+            this.cmbRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRol.FormattingEnabled = true;
+            this.cmbRol.Location = new System.Drawing.Point(36, 328);
+            this.cmbRol.Name = "cmbRol";
+            this.cmbRol.Size = new System.Drawing.Size(392, 28);
+            this.cmbRol.TabIndex = 15;
             // 
             // txt_Repita
             // 
@@ -126,14 +125,14 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Repita su Contraaseña";
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(36, 180);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(392, 26);
-            this.textBox2.TabIndex = 12;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(36, 180);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(392, 26);
+            this.txtPassword.TabIndex = 12;
             // 
             // txt_Contrasenia
             // 
@@ -184,13 +183,13 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "Nombre de Usuario";
             // 
-            // textBox1
+            // txtUsername
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(36, 101);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(392, 26);
-            this.textBox1.TabIndex = 7;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(36, 101);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(392, 26);
+            this.txtUsername.TabIndex = 7;
             // 
             // label2
             // 
@@ -210,45 +209,38 @@
             this.txt_Nombre.Size = new System.Drawing.Size(392, 26);
             this.txt_Nombre.TabIndex = 7;
             // 
-            // btn_Salir
+            // btnDelete
             // 
-            this.btn_Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salir.Location = new System.Drawing.Point(353, 378);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(106, 42);
-            this.btn_Salir.TabIndex = 6;
-            this.btn_Salir.Text = "Salir";
-            this.btn_Salir.UseVisualStyleBackColor = true;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(241, 426);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(106, 42);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Eliminar";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // button3
+            // btnEdit
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(241, 426);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(106, 42);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Eliminar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Location = new System.Drawing.Point(353, 426);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(106, 42);
+            this.btnEdit.TabIndex = 5;
+            this.btnEdit.Text = "Editar";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // btn_Editar
+            // btnCancel
             // 
-            this.btn_Editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Editar.Location = new System.Drawing.Point(353, 426);
-            this.btn_Editar.Name = "btn_Editar";
-            this.btn_Editar.Size = new System.Drawing.Size(106, 42);
-            this.btn_Editar.TabIndex = 5;
-            this.btn_Editar.Text = "Editar";
-            this.btn_Editar.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(129, 426);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 42);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(129, 426);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(106, 42);
+            this.btnCancel.TabIndex = 3;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btn_Eliminar
             // 
@@ -260,15 +252,16 @@
             this.btn_Eliminar.Text = "Eliminar";
             this.btn_Eliminar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(17, 426);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 42);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(17, 426);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(106, 42);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "Guardar";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btn_Cancelar
             // 
@@ -321,6 +314,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "CUUsuarios";
             this.Size = new System.Drawing.Size(841, 509);
+            this.Load += new System.EventHandler(this.CUUsuarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -330,25 +324,24 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.CheckBox chbActivo;
-        private System.Windows.Forms.ComboBox cmd_Roles;
+        private System.Windows.Forms.CheckBox chkDisponibilidad;
+        private System.Windows.Forms.ComboBox cmbRol;
         private System.Windows.Forms.TextBox txt_Repita;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txt_Contrasenia;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_Nombre;
-        public System.Windows.Forms.Button btn_Salir;
-        public System.Windows.Forms.Button button3;
-        public System.Windows.Forms.Button btn_Editar;
-        public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Button btnDelete;
+        public System.Windows.Forms.Button btnEdit;
+        public System.Windows.Forms.Button btnCancel;
         public System.Windows.Forms.Button btn_Eliminar;
-        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button btnSave;
         public System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.Button btnGuadar;

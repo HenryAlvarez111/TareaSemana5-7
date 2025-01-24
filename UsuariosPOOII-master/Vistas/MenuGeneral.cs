@@ -19,28 +19,30 @@ namespace Usuarios.Vistas
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        
+        
+        
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CUUsuarios Usuarios = new CUUsuarios();
-            splitContainer1.Panel2.Controls.Clear();
+            panel1.Controls.Clear();
             Usuarios.Dock = DockStyle.Fill;
-            splitContainer1.Panel2.Controls.Add(Usuarios);
+            panel1.Controls.Add(Usuarios);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void rolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CURoles Roles = new CURoles();
+            panel1.Controls.Clear();
+            Roles.Dock = DockStyle.Fill;
+            panel1.Controls.Add(Roles);
+        }   
+
+        private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm_Reporte_Usuarios = new Reportes.ResporteUsuarios();
             frm_Reporte_Usuarios.ShowDialog();
         }
-
-        private void btnRoles_Click(object sender, EventArgs e)
-        {
-            CURoles Roles = new CURoles();
-            splitContainer1.Panel2.Controls.Clear();
-            Roles.Dock = DockStyle.Fill;
-            splitContainer1.Panel2.Controls.Add(Roles);
-        }
-
-        
     }
 }

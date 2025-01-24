@@ -29,87 +29,80 @@ namespace Usuarios.Vistas
         /// </summary>
         private void InitializeComponent()
         {
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.btnRoles = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // splitContainer1
+            // menuStrip1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usuariosToolStripMenuItem,
+            this.rolesToolStripMenuItem,
+            this.reporteToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(985, 27);
+            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // splitContainer1.Panel1
+            // usuariosToolStripMenuItem
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.button2);
-            this.splitContainer1.Panel1.Controls.Add(this.btnRoles);
-            this.splitContainer1.Panel1.Controls.Add(this.button1);
-            this.splitContainer1.Size = new System.Drawing.Size(985, 515);
-            this.splitContainer1.SplitterDistance = 138;
-            this.splitContainer1.TabIndex = 3;
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
-            // btnRoles
+            // rolesToolStripMenuItem
             // 
-            this.btnRoles.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRoles.Location = new System.Drawing.Point(0, 59);
-            this.btnRoles.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRoles.Name = "btnRoles";
-            this.btnRoles.Size = new System.Drawing.Size(138, 65);
-            this.btnRoles.TabIndex = 5;
-            this.btnRoles.Text = "Roles";
-            this.btnRoles.UseVisualStyleBackColor = true;
-            this.btnRoles.Click += new System.EventHandler(this.btnRoles_Click);
+            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.rolesToolStripMenuItem.Text = "Roles";
+            this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click);
             // 
-            // button2
+            // reporteToolStripMenuItem
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Location = new System.Drawing.Point(0, 124);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 69);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Reporte Usuarios";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.reporteToolStripMenuItem.Name = "reporteToolStripMenuItem";
+            this.reporteToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.reporteToolStripMenuItem.Text = "Reporte";
+            this.reporteToolStripMenuItem.Click += new System.EventHandler(this.reporteToolStripMenuItem_Click);
             // 
-            // button1
+            // panel1
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 59);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Usuarios";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 27);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(985, 488);
+            this.panel1.TabIndex = 5;
             // 
             // MenuGeneral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(985, 515);
-            this.Controls.Add(this.splitContainer1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuGeneral";
             this.Text = "MenuGeneral";
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnRoles;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
     }
 }
